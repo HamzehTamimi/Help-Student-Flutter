@@ -30,6 +30,7 @@ class Homescreen extends StatelessWidget {
         title: const Text('Help Student'),
         backgroundColor: Color.fromRGBO(187, 222, 251, 1),
         centerTitle: true,
+        automaticallyImplyLeading: false,
       ),
       body: GridView.count(
         crossAxisCount: 1,

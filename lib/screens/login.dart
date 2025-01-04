@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:helpstudent/screens/home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -59,7 +60,10 @@ class LoginScreen extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(vertical: 15),
                 ),
                 onPressed: () {
-                  //navigate to home screen
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Homescreen()),
+                  );
                 },
                 child: const Text(
                   'Login',

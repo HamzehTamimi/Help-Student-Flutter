@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:helpstudent/screens/login.dart';
 
 void main() {
   runApp(const MyApp());
@@ -124,7 +125,10 @@ class SettingsPage extends StatelessWidget {
               width: double.infinity,
               child: ElevatedButton(
                 onPressed: () {
-                  Navigator.pop(context);
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => LoginScreen()),
+                  );
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.deepPurple,
