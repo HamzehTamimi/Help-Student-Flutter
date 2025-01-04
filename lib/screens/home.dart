@@ -19,23 +19,12 @@ class Homescreen extends StatelessWidget {
           title: const Text('Help Student'),
           backgroundColor: Color.fromRGBO(187, 222, 251, 1),
           centerTitle: true,
-          actions: <Widget>[
-            IconButton(
-              icon: Icon(
-                Icons.settings,
-                color: Colors.black,
-              ),
-              onPressed: () {
-                // do something
-              },
-            )
-          ],
         ),
         body: GridView.count(
           crossAxisCount: 1,
           childAspectRatio: (1 / .7),
           children: <Widget>[
-              AcademicPlanCard(),
+              GuidanceCard(),
               ITSpecialtyCard(),
               GPACard(),
               MapCard(),

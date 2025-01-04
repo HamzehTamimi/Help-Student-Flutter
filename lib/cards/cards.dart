@@ -77,9 +77,9 @@ class CVCard extends StatelessWidget {
   }
 }
 
-class AcademicPlanCard extends StatelessWidget {
+class GuidanceCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Card(Icons.school, "Academic Plan", ComingSoon());
+    return Card(Icons.school, "Guidence", ComingSoon());
   }
 }
