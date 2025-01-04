@@ -3,6 +3,7 @@ import 'package:helpstudent/screens/map.dart';
 import 'package:helpstudent/screens/cv.dart';
 import 'package:helpstudent/screens/comingsoon.dart';
 import 'package:helpstudent/screens/gpa.dart';
+import 'package:helpstudent/screens/itspeciality.dart';
 
 class Card extends StatelessWidget {
   final IconData icon;
@@ -67,7 +68,7 @@ class GPACard extends StatelessWidget {
 class ITSpecialtyCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Card(Icons.computer, "IT Specialties", ComingSoon());
+    return Card(Icons.computer, "IT Specialties", ITSpecialtiesScreen());
   }
 }
 

@@ -13,6 +13,8 @@ class Homescreen extends StatelessWidget {
             MaterialPageRoute(builder: (context) => SettingsPage()),
           );
         },
+        foregroundColor: Color.fromRGBO(187, 222, 251, 1),
+        backgroundColor: Color.fromRGBO(1, 87, 155, 1),
         child: Icon(Icons.settings),
         tooltip: "Settings",
       ),
