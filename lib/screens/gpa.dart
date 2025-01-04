@@ -68,8 +68,12 @@ class _GPACalculatorScreenState extends State<GPACalculatorScreen> {
       appBar: AppBar(
         title: const Text('GPA Calculator'),
         centerTitle: true,
-        backgroundColor: const Color.fromARGB(255, 43, 11, 224),
+        backgroundColor: const Color.fromRGBO(187, 222, 251, 1),
         elevation: 0,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: ()  {Navigator.pop(context);},
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -133,7 +137,8 @@ class _GPACalculatorScreenState extends State<GPACalculatorScreen> {
               onPressed: _calculateGPA,
               style: ElevatedButton.styleFrom(
                 padding: const EdgeInsets.symmetric(vertical: 15),
-                backgroundColor: const Color.fromARGB(255, 80, 0, 254),
+                backgroundColor: const Color.fromRGBO(1, 87, 155, 1),
+                foregroundColor: Colors.white,
               ),
               child: const Text('Calculate', style: TextStyle(fontSize: 18)),
             ),
