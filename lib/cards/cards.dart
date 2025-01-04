@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:helpstudent/screens/map.dart';
 import 'package:helpstudent/screens/cv.dart';
 import 'package:helpstudent/screens/comingsoon.dart';
+import 'package:helpstudent/screens/gpa.dart';
 
 class Card extends StatelessWidget {
   final IconData icon;
@@ -59,7 +60,7 @@ class MapCard extends StatelessWidget {
 class GPACard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Card(Icons.calculate, "Calculate GPA", Map());
+    return Card(Icons.calculate, "Calculate GPA", GPACalculatorApp());
   }
 }
 
