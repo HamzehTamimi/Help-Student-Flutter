@@ -29,6 +29,7 @@ class SettingsPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
+        backgroundColor: Color.fromRGBO(187, 222, 251, 1),
         title: const Text('Settings'),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
@@ -131,7 +132,7 @@ class SettingsPage extends StatelessWidget {
                   );
                 },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.deepPurple,
+                  backgroundColor: Color.fromRGBO(1, 87, 155, 1),
                   foregroundColor: Colors.white,
                   padding: const EdgeInsets.symmetric(vertical: 16),
                   shape: RoundedRectangleBorder(
