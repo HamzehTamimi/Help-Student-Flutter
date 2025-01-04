@@ -67,7 +67,7 @@ class GPACard extends StatelessWidget {
 class ITSpecialtyCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Card(Icons.computer, "IT Specialties", Map());
+    return Card(Icons.computer, "IT Specialties", ComingSoon());
   }
 }
 
