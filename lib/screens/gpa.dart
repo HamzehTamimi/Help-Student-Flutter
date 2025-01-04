@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:helpstudent/screens/home.dart';
 
 void main() {
   runApp(const GPACalculatorApp());
@@ -29,7 +30,7 @@ class GPACalculatorScreen extends StatefulWidget {
 
 class _GPACalculatorScreenState extends State<GPACalculatorScreen> {
   final List<TextEditingController> _creditControllers =
-  List.generate(5, (_) => TextEditingController());
+      List.generate(5, (_) => TextEditingController());
   final List<String?> _selectedGrades = [null, null, null, null, null];
   String _output = '';
 
@@ -72,7 +73,12 @@ class _GPACalculatorScreenState extends State<GPACalculatorScreen> {
         elevation: 0,
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
-          onPressed: ()  {Navigator.pop(context);},
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => Homescreen()),
+            );
+          },
         ),
       ),
       body: Padding(
@@ -97,9 +103,9 @@ class _GPACalculatorScreenState extends State<GPACalculatorScreen> {
                             value: _selectedGrades[index],
                             items: _gradePoints.keys
                                 .map((grade) => DropdownMenuItem(
-                              value: grade,
-                              child: Text(grade),
-                            ))
+                                      value: grade,
+                                      child: Text(grade),
+                                    ))
                                 .toList(),
                             onChanged: (value) {
                               setState(() {

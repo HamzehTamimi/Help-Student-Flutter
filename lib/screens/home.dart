@@ -6,25 +6,15 @@ class Homescreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            label: 'Settings',
-          ),
-        ],
-        onTap: (int index) {
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
           Navigator.push(
             context,
-            MaterialPageRoute(
-              builder: (context) => index == 0 ? Homescreen() : SettingsPage(),
-            ),
+            MaterialPageRoute(builder: (context) => SettingsPage()),
           );
         },
+        child: Icon(Icons.settings),
+        tooltip: "Settings",
       ),
       appBar: AppBar(
         title: const Text('Help Student'),
