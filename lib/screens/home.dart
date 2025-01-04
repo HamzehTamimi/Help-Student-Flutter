@@ -5,6 +5,16 @@ class Homescreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        bottomNavigationBar: BottomNavigationBar(items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: 'Home',
+          ),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.settings),
+              label: 'Settings',
+          ),
+        ]),
         appBar: AppBar(
           title: const Text('Help Student'),
           backgroundColor: Color.fromRGBO(187, 222, 251, 1),
