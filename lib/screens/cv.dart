@@ -26,12 +26,11 @@ class CV extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 255, 255, 255),
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 54, 147, 224),
+        backgroundColor: const Color.fromRGBO(187, 222, 251, 1),
         title: const Text(
           "CV",
           style: TextStyle(
             fontWeight: FontWeight.bold,
-            fontSize: 30,
           ),
         ),
         centerTitle: true,

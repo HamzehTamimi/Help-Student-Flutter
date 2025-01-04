@@ -59,6 +59,8 @@ flutter:
 
   assets:
     - images/cv.jpg
+    - images/map1.jpg
+    - images/map2.jpg
   # To add assets to your application, add an assets section, like this:
 
   #   - images/a_dot_ham.jpeg

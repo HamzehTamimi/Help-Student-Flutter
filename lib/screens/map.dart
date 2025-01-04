@@ -25,7 +25,7 @@ class Map extends StatelessWidget {
       backgroundColor: const Color.fromARGB(255, 255, 255, 255),
       body: Ccontainer(),
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 54, 147, 224),
+        backgroundColor: Color.fromRGBO(187, 222, 251, 1),
         title: const Text(
           "Map",
           style: TextStyle(
@@ -59,27 +59,26 @@ class Ccontainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(top: 40, bottom: 40),
-      decoration: BoxDecoration(
-        border: Border.all(
-          color: const Color.fromARGB(255, 54, 147, 224),
-          width: 5,
-        ),
-        borderRadius: BorderRadius.circular(10),
-      ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
+          Text("Medical Buildings", style: TextStyle(fontSize: 20),),
           Image.asset(
-            "images/Screenshot_2-1-2025_20246_.jpeg",
+            "images/map1.jpg",
             fit: BoxFit.fill,
           ),
           const SizedBox(height: 10), // مسافة بين الصور
+          Text("Engineering Buildings", style: TextStyle(fontSize: 20),),
           Image.asset(
-            "images/Screenshot_2-1-2025_20141_.jpeg",
+            "images/map2.jpg",
             fit: BoxFit.fill,
           ),
           const SizedBox(height: 20), // مسافة بين الصور والزر
           ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Color.fromRGBO(1, 87, 155, 1),
+              foregroundColor: Colors.white,
+            ),
             onPressed: _launchURL, // عند الضغط على الزر يتم فتح الرابط
             child: const Text('Go To Map'),
           ),
