@@ -35,11 +35,19 @@ class _GPACalculatorScreenState extends State<GPACalculatorScreen> {
   String _output = '';
 
   final Map<String, double> _gradePoints = {
+    'A+': 4.2,
     'A': 4.0,
-    'B': 3.0,
-    'C': 2.0,
-    'D': 1.0,
-    'F': 0.0,
+    'A-': 3.75,
+    'B+': 3.5,
+    'B': 3.25,
+    'B-': 3,
+    'C+': 2.75,
+    'C': 2.5,
+    'C-': 2.25,
+    'D+': 2,
+    'D': 1.75,
+    'D-': 1.5,
+    'F': 0.5,
   };
 
   void _calculateGPA() {

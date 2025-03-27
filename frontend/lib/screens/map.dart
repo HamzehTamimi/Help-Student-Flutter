@@ -40,6 +40,9 @@ class Map extends StatelessWidget {
 }
 
 class Ccontainer extends StatelessWidget {
+  final TransformationController _transformationController =
+      TransformationController(Matrix4.identity()..scale(2.0));
+
   // رابط الخريطة
   final String mapUrl =
       "https://www.google.com/maps/d/viewer?hl=ar&mid=1hFwEahSBrdebkXl0Uy0-lojiRiY30g4&ll=32.49759881514722%2C35.98446569229725&z=15";
@@ -62,16 +65,50 @@ class Ccontainer extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Text("Medical Buildings", style: TextStyle(fontSize: 20),),
-          Image.asset(
-            "images/map1.jpg",
-            fit: BoxFit.fill,
+          Text(
+            "Medical Buildings",
+            style: TextStyle(fontSize: 20),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(15.0),
+              child: InteractiveViewer(
+                transformationController: _transformationController,
+                boundaryMargin: EdgeInsets.zero,
+                constrained: true,
+                minScale: 1.0,
+                maxScale: 4.0,
+                child: Image.asset(
+                  "images/map1.jpg",
+                  fit: BoxFit.fill,
+                ),
+              ),
+            ),
           ),
           const SizedBox(height: 10), // مسافة بين الصور
-          Text("Engineering Buildings", style: TextStyle(fontSize: 20),),
-          Image.asset(
-            "images/map2.jpg",
-            fit: BoxFit.fill,
+          Text(
+            "Engineering Buildings",
+            style: TextStyle(fontSize: 20),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            // this is for zoom of the image
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(15.0),
+              child: InteractiveViewer(
+                transformationController:
+                    TransformationController(Matrix4.identity()..scale(2.0)),
+                boundaryMargin: EdgeInsets.zero,
+                constrained: true,
+                minScale: 1.0,
+                maxScale: 4.0,
+                child: Image.asset(
+                  "images/map2.jpg",
+                  fit: BoxFit.fill,
+                ),
+              ),
+            ),
           ),
           const SizedBox(height: 20), // مسافة بين الصور والزر
           ElevatedButton(

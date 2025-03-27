@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:helpstudent/screens/guidance.dart';
 import 'package:helpstudent/screens/map.dart';
 import 'package:helpstudent/screens/cv.dart';
 import 'package:helpstudent/screens/comingsoon.dart';
 import 'package:helpstudent/screens/gpa.dart';
-import 'package:helpstudent/screens/itspeciality.dart';
+import 'package:helpstudent/screens/speciality/itspeciality.dart';
 
 class Card extends StatelessWidget {
   final IconData icon;
@@ -82,6 +83,6 @@ class CVCard extends StatelessWidget {
 class GuidanceCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Card(Icons.school, "Guidence", ComingSoon());
+    return Card(Icons.school, "Guidence", GuidanceScreen());
   }
 }

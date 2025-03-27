@@ -68,6 +68,11 @@ class _LoginScreenState extends State<LoginScreen> {
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
+                style: const ButtonStyle(
+                  backgroundColor: WidgetStatePropertyAll<Color>(
+                    Color.fromRGBO(1, 87, 155, 1),
+                  ),
+                ),
                 onPressed: login,
                 child: const Text('Login',
                     style: TextStyle(fontSize: 16, color: Colors.white)),
