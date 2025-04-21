@@ -1,45 +1,63 @@
-# Miscellaneous
-*.class
-*.log
-*.pyc
-*.swp
+# Global ignores
 .DS_Store
-.atom/
-.build/
-.buildlog/
-.history
-.svn/
-.swiftpm/
-migrate_working_dir/
+Thumbs.db
 
-# IntelliJ related
-*.iml
-*.ipr
-*.iws
-.idea/
+# =========================
+# Flutter - frontend/
+# =========================
+/frontend/.dart_tool/
+/frontend/.idea/
+/frontend/.packages
+/frontend/.flutter-plugins
+/frontend/.flutter-plugins-dependencies
+/frontend/.metadata
+/frontend/build/
+/frontend/pubspec.lock
+/frontend/flutter_*.png
 
-# The .vscode folder contains launch configuration and tasks you configure in
-# VS Code which you may wish to be included in version control, so this line
-# is commented out by default.
-#.vscode/
+# Flutter specific
+/frontend/ios/Flutter/Flutter.framework
+/frontend/ios/Flutter/Flutter.podspec
+/frontend/ios/Flutter/App.framework
+/frontend/ios/.symlinks/
+/frontend/ios/Pods/
+/frontend/ios/Runner.xcworkspace
+/frontend/macos/Flutter/ephemeral/
+/frontend/macos/Pods/
+/frontend/macos/Runner.xcworkspace
 
-# Flutter/Dart/Pub related
-**/doc/api/
-**/ios/Flutter/.last_build_id
-.dart_tool/
-.flutter-plugins
-.flutter-plugins-dependencies
-.pub-cache/
-.pub/
-/build/
+# Web build
+/frontend/web/.dart_tool/
+/frontend/web/build/
 
-# Symbolication related
-app.*.symbols
+# Android specific
+/frontend/android/.gradle/
+/frontend/android/captures/
+/frontend/android/.idea/
+/frontend/android/local.properties
+/frontend/android/build/
+/frontend/android/.settings/
 
-# Obfuscation related
-app.*.map.json
+# =========================
+# Node.js - backend/
+# =========================
+/backend/node_modules/
+/backend/.env
+/backend/.env.local
+/backend/.npm
+/backend/.DS_Store
+/backend/dist/
+/backend/build/
+/backend/.cache/
+/backend/logs/
+/backend/pids/
+/backend/tmp/
 
-# Android Studio will place build artifacts here
-/android/app/debug
-/android/app/profile
-/android/app/release
+# Logs
+/backend/*.log
+/backend/logs/**/*.log
+/backend/npm-debug.log*
+
+# IDEs and Editors
+/backend/.idea/
+/backend/.vscode/
